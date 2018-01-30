@@ -1,8 +1,3 @@
-#!/bin/bash
-
-set -eux -o pipefail
+#!/bin/sh
 
 git clone https://github.com/oufti-playground/lab-vm.git
-cd ./docker || exit 1
-
-docker-compose up -d
