@@ -15,7 +15,7 @@ services:
   jenkins:
     image: ${DOCKER_USERNAME}/oufti-jenkins
     read_only: true
-    mem_limit: 768m
+    mem_limit: 512m
     restart: unless-stopped
     ports:
     - "8080:8080"
@@ -28,6 +28,7 @@ services:
     - "${EXTERNAL_DOMAIN}:${DOCKER_BRIDGE_IP}"
     environment:
     - JENKINS_EXTERNAL_URL=http://${EXTERNAL_DOMAIN}:${EXTERNAL_PORT}
+    - JAVA_OPTS=-XshowSettings:vm -Djenkins.install.runSetupWizard=false -Xms256m -Xmx512m
 
   jenkins-docker-node:
     image: ${DOCKER_USERNAME}/oufti-jenkins-docker-node
