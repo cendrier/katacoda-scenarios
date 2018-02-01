@@ -14,3 +14,4 @@ git clone https://github.com/dduportal/katacoda-scenarios.git /tmp/repo
 cp -r /tmp/repo/your-first-jenkins-pipeline/docker ~/
 cd ~/docker
 docker-compose pull --parallel
+docker-compose up -d
