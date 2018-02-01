@@ -11,7 +11,5 @@ curl -sSL -o "${DOCKER_COMPOSE_BIN}" \
 
 ## Get infra code
 git clone https://github.com/dduportal/katacoda-scenarios.git /tmp/repo
-ls -l /tmp/repo
-ls -l /tmp/repo/your-first-jenkins-pipeline
-# cp -r /tmp/repo/your-first-jenkins-pipeline/docker-compose.yml ~/
-# cp -r /tmp/repo/your-first-jenkins-pipeline/.env ~/
+cp -r /tmp/repo/your-first-jenkins-pipeline/docker-compose.yml ~/
+cp -r /tmp/repo/your-first-jenkins-pipeline/.env ~/
