@@ -10,7 +10,7 @@ services:
     - "${EXTERNAL_DOMAIN}:${DOCKER_BRIDGE_IP}"
     environment:
     - EXTERNAL_DOMAIN=${EXTERNAL_DOMAIN}
-    - EXTERNAL_URL=http://${EXTERNAL_DOMAIN}:${EXTERNAL_PORT}/gitserver
+    - EXTERNAL_URL=http://${EXTERNAL_DOMAIN}:${EXTERNAL_PORT}
 
   jenkins:
     image: ${DOCKER_USERNAME}/oufti-jenkins
