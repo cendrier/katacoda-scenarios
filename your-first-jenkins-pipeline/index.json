@@ -11,8 +11,8 @@
     "assets": {
       "client": [
         {
-          "file": "docker/*",
-          "target": "~/docker/"
+          "file": "docker/",
+          "target": "~/"
         }
       ]
     },
