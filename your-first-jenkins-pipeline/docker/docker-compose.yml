@@ -6,58 +6,29 @@ services:
     restart: unless-stopped
     ports:
     - "3000:3000"
-    extra_hosts:
-    - "${EXTERNAL_DOMAIN}:${DOCKER_BRIDGE_IP}"
     environment:
     - EXTERNAL_DOMAIN=${EXTERNAL_DOMAIN}
     - EXTERNAL_URL=http://${EXTERNAL_DOMAIN}:${EXTERNAL_PORT}
 
   jenkins:
     image: ${DOCKER_USERNAME}/oufti-jenkins
-    read_only: true
-    mem_limit: 512m
     restart: unless-stopped
     ports:
     - "8080:8080"
-    volumes:
-    - jenkins-data:/var/jenkins_home
-    - /tmp
-    - jenkins-war:/var/jenkins_home/war
-    - jenkins-plugins:/var/jenkins_home/plugins
-    extra_hosts:
-    - "${EXTERNAL_DOMAIN}:${DOCKER_BRIDGE_IP}"
     environment:
     - JENKINS_EXTERNAL_URL=http://${EXTERNAL_DOMAIN}:${EXTERNAL_PORT}
     - JAVA_OPTS=-XshowSettings:vm -Djenkins.install.runSetupWizard=false -Xms256m -Xmx512m
 
-  jenkins-docker-node:
-    image: ${DOCKER_USERNAME}/oufti-jenkins-docker-node
-    restart: unless-stopped
-    privileged: true
-    volumes:
-    - jenkins-docker-node-data:/home/jenkins
-    - /var/run
-    - /etc
-    - /tmp
-    extra_hosts:
-    - "${EXTERNAL_DOMAIN}:${DOCKER_BRIDGE_IP}"
-    environment:
-    - JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== vagrant insecure public key
-
-volumes:
-  jenkins-data:
-    driver: local
-  jenkins-war:
-    driver: local
-    driver_opts:
-      type: tmpfs
-      device: tmpfs
-      o: rw,noexec,size=100m
-  jenkins-plugins:
-    driver: local
-    driver_opts:
-      type: tmpfs
-      device: tmpfs
-      o: rw,noexec,size=400m
-  jenkins-docker-node-data:
-    driver: local
+  # jenkins-docker-node:
+  #   image: ${DOCKER_USERNAME}/oufti-jenkins-docker-node
+  #   restart: unless-stopped
+  #   privileged: true
+  #   volumes:
+  #   - jenkins-docker-node-data:/home/jenkins
+  #   - /var/run
+  #   - /etc
+  #   - /tmp
+  #   extra_hosts:
+  #   - "${EXTERNAL_DOMAIN}:${DOCKER_BRIDGE_IP}"
+  #   environment:
+  #   - JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== vagrant insecure public key
