@@ -15,7 +15,7 @@ services:
   jenkins:
     image: ${DOCKER_USERNAME}/oufti-jenkins
     read_only: true
-    mem_limit: 2048m
+    mem_limit: 768m
     restart: unless-stopped
     ports:
     - "8080:8080"
