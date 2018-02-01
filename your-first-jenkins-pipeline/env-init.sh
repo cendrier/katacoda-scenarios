@@ -12,3 +12,7 @@ curl -sSL -o "${DOCKER_COMPOSE_BIN}" \
 
 ## Get Code
 git clone https://github.com/oufti-playground/lab-vm.git
+cd lab-vm/docker || :
+export DOCKER_USERNAME=dduportal
+docker-compose pull --parallel front devbox jenkins gitserver jenkins-docker-node
+docker-compose up -d
