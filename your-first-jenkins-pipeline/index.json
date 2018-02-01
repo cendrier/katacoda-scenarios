@@ -8,6 +8,14 @@
       "title": "Step 1 - Run Command",
       "text": "step1.md"
     }],
+    "assets": {
+      "client": [
+        {
+          "file": "docker",
+          "target": "~/"
+        }
+      ]
+    },
     "intro": {
       "text": "intro.md",
       "credits": "",
