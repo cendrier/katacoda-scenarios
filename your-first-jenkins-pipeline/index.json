@@ -11,11 +11,7 @@
     "assets": {
       "client": [
         {
-          "file": "docker-compose.yml",
-          "target": "~/"
-        },
-        {
-          "file": ".env",
+          "file": "*",
           "target": "~/"
         }
       ]
