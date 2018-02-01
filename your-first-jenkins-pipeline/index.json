@@ -12,7 +12,7 @@
       "client": [
         {
           "file": "docker/*",
-          "target": "~/infra"
+          "target": "~/infra/"
         }
       ]
     },
