@@ -10,5 +10,7 @@ curl -sSL -o "${DOCKER_COMPOSE_BIN}" \
   https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-"$(uname -s)"-"$(uname -m)"
 
 ## Start infra
-cd ~/
-# docker-compose pull --parallel
+git clone https://github.com/dduportal/katacodas-scenarios.git /tmp/repo
+cp -r /tmp/repo/your-first-jenkins-pipeline/docker ~/
+cd ~/docker
+docker-compose pull --parallel
