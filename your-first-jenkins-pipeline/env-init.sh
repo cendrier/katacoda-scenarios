@@ -13,3 +13,9 @@ curl -sSL -o "${DOCKER_COMPOSE_BIN}" \
 git clone https://github.com/dduportal/katacoda-scenarios.git /tmp/repo
 cp -r /tmp/repo/your-first-jenkins-pipeline/docker-compose.yml ~/
 cp -r /tmp/repo/your-first-jenkins-pipeline/.env ~/
+
+## Start infra
+cd ~/
+env | sort
+docker-compose pull --parallel
+docker-compose up -d
