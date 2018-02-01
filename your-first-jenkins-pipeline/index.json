@@ -11,7 +11,11 @@
     "assets": {
       "client": [
         {
-          "file": "to_upload/infra/*",
+          "file": "docker-compose.yml",
+          "target": "~/"
+        },
+        {
+          "file": ".env",
           "target": "~/"
         }
       ]
