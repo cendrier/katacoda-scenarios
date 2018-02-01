@@ -15,7 +15,7 @@
           "target": "~/"
         }
       ]
-    }
+    },
     "intro": {
       "text": "intro.md",
       "credits": "",
