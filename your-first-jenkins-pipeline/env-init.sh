@@ -15,9 +15,5 @@ git clone https://github.com/oufti-playground/lab-vm.git
 cd lab-vm/docker || :
 export DOCKER_USERNAME=dduportal
 
-echo "==${HOST_SUBDOMAIN}=="
-echo "==${KATACODA_HOST}=="
-echo "==${HOST_SUBDOMAIN}-10000-${KATACODA_HOST}.environments.katacoda.com=="
-
 docker-compose pull --parallel front devbox jenkins gitserver jenkins-docker-node
 docker-compose up -d
