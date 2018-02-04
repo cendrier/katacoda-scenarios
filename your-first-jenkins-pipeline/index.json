@@ -4,15 +4,23 @@
   "difficulty": "medium",
   "time": "10 minutes",
   "details": {
+    "assets": {
+      "client": [
+        {
+          "file": "Jenkinsfile",
+          "target": "~/"
+        }
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "credits": "",
+      "courseData": "env-init.sh"
+    },
     "steps": [{
       "title": "Step 1 - Run Command",
       "text": "step1.md"
     }],
-    "intro": {
-      "text": "intro.md",
-      "credits": "",
-      "code": "env-init.sh"
-    },
     "finish": {
       "text": "finish.md"
     }
