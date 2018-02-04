@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -eu -o pipefail
+# set -eu -o pipefail
 
 ## Install Docker-Compose
 # echo "== Installing Docker-Compose"
