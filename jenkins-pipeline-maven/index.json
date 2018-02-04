@@ -1,8 +1,8 @@
 {
-  "title": "Your First Jenkins Pipeline",
-  "description": "A Jenkins Pipeline training course",
-  "difficulty": "medium",
-  "time": "10 minutes",
+  "title": "Jenkins Pipeline for Maven",
+  "description": "Jenkins Pipeline for Maven",
+  "difficulty": "easy",
+  "time": "5 minutes",
   "details": {
     "assets": {
       "client": [
