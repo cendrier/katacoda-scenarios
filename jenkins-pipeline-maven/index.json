@@ -9,6 +9,9 @@
         {
           "file": "preconfigureJenkins.groovy",
           "target": "~/"
+        },{
+          "file": "jenkins.CLI.xml",
+          "target": "~/"
         }
       ]
     },
