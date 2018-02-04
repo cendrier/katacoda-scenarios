@@ -7,7 +7,7 @@
     "assets": {
       "client": [
         {
-          "file": "*",
+          "file": "preconfigureJenkins.groovy",
           "target": "~/"
         }
       ]
