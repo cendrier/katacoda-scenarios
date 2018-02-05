@@ -2,7 +2,9 @@
 
 cd ~/ || exit 1
 
-git clone https://github.com/jenkins-docs/simple-java-maven-app ~/git
+# Run on the machine which runs the Docker Engine
+ssh host01 \
+  git clone https://github.com/jenkins-docs/simple-java-maven-app ~/git
 
 docker run \
   -d \

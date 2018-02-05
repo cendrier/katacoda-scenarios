@@ -4,17 +4,6 @@
   "difficulty": "easy",
   "time": "5 minutes",
   "details": {
-    "assets": {
-      "client": [
-        {
-          "file": "preconfigureJenkins.groovy",
-          "target": "~/"
-        },{
-          "file": "jenkins.CLI.xml",
-          "target": "~/"
-        }
-      ]
-    },
     "intro": {
       "text": "intro.md",
       "credits": "",
@@ -29,7 +18,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n"
   },
   "backend": {
