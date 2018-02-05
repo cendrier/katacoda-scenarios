@@ -2,12 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      agent {
-        node {
-          label 'docker'
-        }
-        
-      }
+      agent any
       steps {
         sh 'docker image ls'
       }
