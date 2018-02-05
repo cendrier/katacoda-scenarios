@@ -18,7 +18,6 @@
     "intro": {
       "text": "intro.md",
       "credits": "",
-      "code": "env-init-2.sh",
       "courseData": "env-init.sh"
     },
     "steps": [{
