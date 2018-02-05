@@ -18,11 +18,12 @@
     "intro": {
       "text": "intro.md",
       "credits": "",
-      "courseData": "env-init.sh"
+      "code": "env-init.sh"
     },
     "steps": [{
       "title": "Step 1 - Run Command",
-      "text": "step1.md"
+      "text": "step1.md",
+      "courseData": "env-init-2.sh"
     }],
     "finish": {
       "text": "finish.md"
