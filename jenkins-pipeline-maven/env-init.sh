@@ -1,5 +1,7 @@
 #!/bin/sh
 
-echo "OK"
+cd ~/ || exit 1
 
-ls -ltr ~/
+git clone https://github.com/jenkins-docs/simple-java-maven-app ~/git
+
+docker pull dduportal/katacoda-blueocean
