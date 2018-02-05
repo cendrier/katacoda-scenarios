@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd ~/ || true
+echo "OK"
 
-ls -ltrh
+ls -ltr ~/
