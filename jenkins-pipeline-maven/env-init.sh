@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo "AAA" >> /tmp/token
+cd ~/ || true
+
+ls -ltrh
