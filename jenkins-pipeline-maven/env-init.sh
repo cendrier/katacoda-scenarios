@@ -1,5 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-cd ~/ || exit 1
-
-git clone https://github.com/jenkins-docs/simple-java-maven-app ~/git
+echo "AAA" >> /tmp/token

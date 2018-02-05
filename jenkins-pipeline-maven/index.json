@@ -17,12 +17,13 @@
     },
     "intro": {
       "text": "intro.md",
-      "credits": ""
+      "credits": "",
+      "code": "env-init-2.sh",
+      "courseData": "env-init.sh"
     },
     "steps": [{
       "title": "Step 1 - Run Command",
-      "text": "step1.md",
-      "courseData": "env-init.sh"
+      "text": "step1.md"
     }],
     "finish": {
       "text": "finish.md"
