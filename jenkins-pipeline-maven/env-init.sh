@@ -4,4 +4,11 @@ cd ~/ || exit 1
 
 git clone https://github.com/jenkins-docs/simple-java-maven-app ~/git
 
-docker pull dduportal/katacoda-blueocean
+docker run \
+  -d \
+  -u root \
+  -p 8080:8080 \
+  -v jenkins-data:/var/jenkins_home \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v "${HOME}/git":/home \
+  dduportal/katacoda-blueocean
